@@ -12,13 +12,10 @@ class Fuul {
 
   private fetchProjectData(apiKey: string): ProjectData {
     return {
-      name: "Mock Project",
-      description: "This is an example project!",
+      name: "PEDRO NFT COLLECTION",
+      description: "This is a project for Pedro that dances!",
       creation: new Date(),
-      benefits: "Earn 10% of transaction by each referred.",
-      social: {
-        farcaster: "",
-      },
+      benefits: "Earn 10% of transaction by each referred",
     };
   }
 

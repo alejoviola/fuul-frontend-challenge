@@ -3,7 +3,7 @@ export interface ProjectData {
   description: string;
   creation: Date | null;
   benefits: string | null;
-  social: {
+  social?: {
     twitter?: string;
     instagram?: string;
     farcaster?: string;
