@@ -1,0 +1,11 @@
+.Wallet {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--blue);
+  background-color: var(--neutral);
+
+  &:hover {
+    color: white;
+  }
+}

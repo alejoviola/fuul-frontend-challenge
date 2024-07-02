@@ -1,25 +1,23 @@
+"use client";
 import { ethers } from "ethers";
 import { create } from "zustand";
 
 interface WalletState {
   metamask: boolean;
-  signer?: any;
-  provider?: any;
-  address?: string;
-  balance?: string;
-  chainId?: string;
-  network?: string;
+  signer: ethers.JsonRpcSigner | null;
+  provider: ethers.BrowserProvider | null;
   checkMetamask: () => void;
-  connectWallet: () => void;
+  connectWallet: () => Promise<void>;
+  disconnectWallet: () => void;
 }
 
 export const useWalletStore = create<WalletState>()((set, get) => ({
-  metamask: false,
+  metamask: true,
   signer: null,
   provider: null,
   checkMetamask: () => {
-    const isInstalled = window.ethereum == null;
-    set(() => ({ metamask: isInstalled }));
+    const isInstalled = window.ethereum != null;
+    set({ metamask: isInstalled });
   },
   connectWallet: async () => {
     if (window.ethereum) {
@@ -38,5 +36,8 @@ export const useWalletStore = create<WalletState>()((set, get) => ({
     } else {
       console.error("MetaMask is not installed");
     }
+  },
+  disconnectWallet: () => {
+    set({ signer: null, provider: null });
   },
 }));
