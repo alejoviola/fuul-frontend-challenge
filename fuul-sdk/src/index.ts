@@ -26,7 +26,7 @@ class Fuul {
     if (!this.projectInfo) {
       throw new Error("Fuul no initiated");
     }
-    Modal.showModal(this.projectInfo);
+    Modal.showModal(this.projectInfo, referrerAddress);
   }
 }
 
