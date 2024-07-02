@@ -12,12 +12,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      var(--foreground-rgb)
-    )
-    var(--foreground-rgb)
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, transparent, var(--foreground-rgb))
+    var(--foreground-rgb);
 }
 
 @layer utilities {
