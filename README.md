@@ -110,6 +110,7 @@ Fuul.showReferralModal("referrer-address-here");
 - Nextjs
 - Ethers.js
 - Zustand
+- Tailwind
 - Material UI
 
 #
