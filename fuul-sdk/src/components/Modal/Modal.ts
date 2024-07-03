@@ -101,6 +101,9 @@ class Modal {
     document.addEventListener("click", this.handleClickOutside);
   }
 
+  ///////////////
+  // Functions //
+  ///////////////
   private handleClickOutside = (event: MouseEvent) => {
     if (this.modal && !this.modal.contains(event.target as Node)) {
       this.handleCloseModal();
